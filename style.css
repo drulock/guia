@@ -84,6 +84,30 @@ ul {
     list-style: none;
 }
 
+.titulo-goal {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0.5em 0 0.2em 0;
+  line-height: 1.1;
+}
+
+.titulo-goal .rojo {
+    background: linear-gradient(to top, #e83e8c 0%, #ff8fa3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.titulo-goal .amarillo {
+    background: linear-gradient(to top, #ffe066 0%, #fff9c4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 /* ======================= HEADER / NAVEGACIÓN ======================= */
 #main-header {
     position: fixed;
