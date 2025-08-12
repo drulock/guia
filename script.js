@@ -75,3 +75,23 @@ document.addEventListener('DOMContentLoaded', function() {
     handleScrollAnimation(); // Para elementos ya visibles en la carga
     changeNavOnScroll(); // Para estado inicial del nav
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-links a');
+    const sections = Array.from(links).map(link => document.querySelector(link.getAttribute('href')));
+
+    function activateLink() {
+        let index = sections.length - 1;
+        for (let i = 0; i < sections.length; i++) {
+            if (sections[i] && window.scrollY + 80 < sections[i].offsetTop) {
+                index = i - 1;
+                break;
+            }
+        }
+        links.forEach(link => link.classList.remove('active'));
+        if (index >= 0) links[index].classList.add('active');
+    }
+
+    window.addEventListener('scroll', activateLink);
+    activateLink(); // Inicial
+});
